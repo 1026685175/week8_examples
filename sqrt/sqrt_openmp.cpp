@@ -3,14 +3,14 @@
 #include <memory>
 #include <cmath>
 
-using std::chrono::high_resolution_clock,
-      std::chrono::duration_cast,
-      std::chrono::microseconds;
+using std::chrono::high_resolution_clock;
+using std::chrono::duration_cast;
+using std::chrono::milliseconds;
 
-using std::sqrt,
-      std::cout,
-      std::endl,
-      std::make_unique;
+using std::sqrt;
+using std::cout;
+using std::endl;
+using std::make_unique;
 
 int main() {
 
@@ -25,7 +25,7 @@ int main() {
   }
 
   auto stop = high_resolution_clock::now();
-  auto duration = duration_cast<microseconds>(stop - start);
+  auto duration = duration_cast<milliseconds>(stop - start);
 
   cout << "Time for " << N << " iterations: " << duration.count() << endl;
 
