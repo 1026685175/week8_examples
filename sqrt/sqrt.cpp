@@ -19,7 +19,6 @@ int main() {
 
   auto start = high_resolution_clock::now();
   
-#pragma omp parallel for
   for(int i=0; i<N; ++i) {
     array[i] = sqrt(i);
   }
