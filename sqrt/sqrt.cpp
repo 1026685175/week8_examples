@@ -18,7 +18,8 @@ int main() {
   auto array = make_unique<double[]>(N);
 
   auto start = high_resolution_clock::now();
-
+  
+#pragma omp parallel for
   for(int i=0; i<N; ++i) {
     array[i] = sqrt(i);
   }
