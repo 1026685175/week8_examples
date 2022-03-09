@@ -7,11 +7,6 @@ using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::milliseconds;
 
-using std::sqrt;
-using std::cout;
-using std::endl;
-using std::make_unique;
-
 int main() {
 
   const int N = 50000000;
@@ -28,8 +23,8 @@ int main() {
   auto stop = high_resolution_clock::now();
   auto duration = duration_cast<milliseconds>(stop - start);
 
-  cout << "Result: " << sum << endl;
-  cout << "Time for " << N << " iterations: " << duration.count() << endl;
+  std::cout << "Result: " << sum << std::endl;
+  std::cout << "Time for " << N << " iterations: " << duration.count() << std::endl;
 
   return 0;
 }
