@@ -3,6 +3,7 @@ project(pi)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(pi main.cpp)
+#add_executable(pi main_openmp.cpp)
 
 find_package(OpenMP)
 if(OpenMP_CXX_FOUND)
