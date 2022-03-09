@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 project(pi)
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(pi pi.cpp)
+add_executable(pi main.cpp)
 
 find_package(OpenMP)
 if(OpenMP_CXX_FOUND)
