@@ -14,13 +14,13 @@ using std::make_unique;
 
 int main() {
 
-  const int N_ELEMENTS = 50000000;
-  double dx = 1.0f/N_ELEMENTS;
+  const int N = 50000000;
+  double dx = 1.0f/N;
 
   auto start = high_resolution_clock::now();
 
   double sum = 0.0f;
-  for(int i=0; i<N_ELEMENTS; ++i) {
+  for(int i=0; i<N; ++i) {
     double x = i*dx;
     sum += 4.0f/(1.0f + x*x)*dx;
   }
@@ -29,7 +29,7 @@ int main() {
   auto duration = duration_cast<milliseconds>(stop - start);
 
   cout << "Result: " << sum << endl;
-  cout << "Time for " << N_ELEMENTS << " iterations: " << duration.count() << endl;
+  cout << "Time for " << N << " iterations: " << duration.count() << endl;
 
   return 0;
 }
